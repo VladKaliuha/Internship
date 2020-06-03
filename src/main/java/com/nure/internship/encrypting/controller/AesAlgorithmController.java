@@ -1,6 +1,6 @@
 package com.nure.internship.encrypting.controller;
 
-import com.nure.internship.encrypting.dto.MessageToEncryptDTO;
+import com.nure.internship.encrypting.dto.MessageAndKeyDTO;
 import com.nure.internship.encrypting.entity.EncryptedMessage;
 import com.nure.internship.encrypting.service.Algorithm;
 import com.nure.internship.encrypting.service.MessageService;
@@ -48,7 +48,7 @@ public class AesAlgorithmController {
 
     @SneakyThrows
     @PostMapping
-    public ResponseEntity encode(@RequestBody MessageToEncryptDTO messageToEncrypt) {
+    public ResponseEntity encode(@RequestBody MessageAndKeyDTO messageToEncrypt) {
         String encryptedMessage = aes.encrypt(messageToEncrypt.getMessage(), messageToEncrypt.getKey());
         messageService.saveMessage(encryptedMessage);
         return ResponseEntity.ok(encryptedMessage);

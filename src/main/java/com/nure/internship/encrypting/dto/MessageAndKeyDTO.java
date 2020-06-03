@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class MessageToEncryptDTO {
+public class MessageAndKeyDTO {
 
     private String key;
 

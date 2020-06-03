@@ -1,5 +1,6 @@
 package com.nure.internship.encrypting.controller;
 
+import com.nure.internship.encrypting.dto.MessageAndKeyDTO;
 import com.nure.internship.encrypting.entity.EncryptedMessage;
 import com.nure.internship.encrypting.service.Algorithm;
 import com.nure.internship.encrypting.service.MessageService;
@@ -16,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -51,8 +51,8 @@ public class RsaAlgorithmController {
     @PostMapping
     public ResponseEntity encode(@RequestBody String message) {
         RSAUtils.KeyPairStrings keyPairStrings = RSAUtils.getKeyPair();
-        String encryptedMessage = rsa.encrypt(message, keyPairStrings.getPubKey());
+        String encryptedMessage = rsa.encrypt(message.substring(1, message.length() - 1), keyPairStrings.getPubKey());
         messageService.saveMessage(encryptedMessage);
-        return ResponseEntity.ok(Collections.singletonMap(keyPairStrings.getPrivKey(), encryptedMessage));
+        return ResponseEntity.ok(new MessageAndKeyDTO(keyPairStrings.getPrivKey(), encryptedMessage));
     }
 }
