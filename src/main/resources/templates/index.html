@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT cipher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../internship/styles.css">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+</head>
+<body>
+
+<div id="main-menu">
+    <h1>
+        IOT Cipher
+    </h1>
+    <h2  onclick="openEncrypt()">
+        Encrypt
+    </h2>
+    <h2 onclick="openDecrypt()">
+        Decrypt
+    </h2>
+</div>
+<div id="encrypt" class="menu">
+    <img alt="" class="cross-button" src="./img/close.svg" onclick="mainMenu()">
+    <h3>Encrypt</h3>
+    <div class="underline"></div>
+    <form>
+        <select placeholder="Subject line" name="enc-method" id="enc-method" required>
+            <option disabled hidden selected>Encryption method</option>
+            <option value="aes">AES</option>
+            <option value="rsa">RSA</option>
+        </select>
+
+        <input type="text" placeholder="Message" name="message" id="message" required>
+        <input  type="text" placeholder="Encryption key" name="enc-key" id="enc-key" >
+            <input type="submit" value="ENCRYPT" class="form-button" onclick="encrypt()" />
+        <output type="text"  name="denc-key" id="encr-msg" ></output>
+
+    </form>
+</div>
+
+<div id="decrypt" class="menu">
+    <img alt="" class="cross-button" src="./img/close.svg" onclick="mainMenu()">
+    <h3>Decrypt</h3>
+    <div class="underline"></div>
+    <form>
+        <select placeholder="Subject line" name="denc-method" id="denc-method" required>
+            <option disabled hidden selected>Decryption method</option>
+            <option value="aes">AES</option>
+            <option value="rsa">RSA</option>
+        </select>
+        <select placeholder="Subject line" name="msg-from-db" id="msg-from-db" required>
+            <option disabled hidden selected> Message from db</option>
+            <option>Message 1</option>
+            <option>Message 2</option>
+            <option>Message 3</option>
+        </select>
+        <input type="text" placeholder="Encryption key" name="denc-key" id="denc-key" required>
+        <input type="submit" value="DECRYPT" class="form-button" />
+
+    </form>
+</div>
+<canvas width="1920" height="942"></canvas>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

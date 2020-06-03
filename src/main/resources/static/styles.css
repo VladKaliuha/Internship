@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+html, body {
+  overflow: hidden;
+  margin: 0;
+}
+
+body {
+  font-family: "Ralevay", sans-serif;
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+button {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+#decrypt, #encrypt {
+  display: none;
+}
+
+h1, h2 {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  user-select: none;
+  font-size: 30px;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  margin: 12px 0;
+  left: 4px;
+}
+
+h2 {
+  margin: 35px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+}
+
+#main-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+  margin-top: -160px;
+  text-align: center;
+}
+
+h3 {
+  user-select: none;
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cross-button {
+  right: 10px;
+  user-select: none;
+  top: -30px;
+  position: absolute;
+  width: 15px;
+  cursor: pointer;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: 20px auto;
+  width: 80px;
+}
+
+.select {
+  width: 100%;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: -150px;
+  text-align: center;
+}
+.menu option {
+  width: 500px !important;
+}
+.menu form button, .menu form select {
+  text-transform: none;
+}
+.menu form button, .menu form input, .menu form select, .menu form textarea, .menu form output {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+.menu form input, .menu form output {
+  line-height: normal;
+}
+.menu form input[type=text]:focus, .menu form [type=email]:focus, .menu form textarea:focus, .menu form output {
+  outline: none;
+  padding: 0 0 5px 0;
+}
+.menu form input[type=text], .menu form [type=email], .menu form select, .menu form textarea, .menu form output {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 0 1.875em 0;
+  padding: 0 0 5px 0;
+  text-transform: uppercase;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+.menu form select {
+  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png") no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.menu form button, .menu form input, .menu form select, .menu form textarea, .menu form output {
+  color: #5A5A5A;
+  font: inherit;
+}
+.menu form .form-button {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  outline: none;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.menu form .form-button:hover {
+  background: #474544;
+  color: #F2F3EB;
+}
+
+@media (max-width: 500px) {
+  .menu {
+    width: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .menu option {
+    width: 300px;
+  }
+}
+#enc-key {
+  display: none;
+}
+
+.menu form output {
+  display: none;
+  margin-top: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
