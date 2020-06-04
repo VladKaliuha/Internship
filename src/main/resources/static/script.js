@@ -1,4 +1,3 @@
-//красивая срань
 document.addEventListener('touchmove', function (e) {
     e.preventDefault()
 })
@@ -57,10 +56,18 @@ document.ontouchstart = i
 i()
 //interface
 function openEncrypt() {
+    $('#encr-msg').hide();
+    $('#priv-key').hide();
+    $('.encr-result').hide();
+
+    $('#enc-key').val("");
+    $('#message').val("");
     document.getElementById("main-menu").style.display = "none";
     document.getElementById("encrypt").style.display = "block";
 }
 function openDecrypt() {
+    $('#denc-key').val("");
+    $('.decr-result').hide();
     document.getElementById("main-menu").style.display = "none";
     document.getElementById("decrypt").style.display = "block";
     getMessagesFromDB();
@@ -99,9 +106,11 @@ function encrypt(){
         contentType: "application/json",
         data: JSON.stringify(dataToEncrypt),
         success: function(data, status, xhr) {
+            $('#encr-msg').empty();
+            $('#priv-key').empty();
             showResult(encryptionMethod, data);
-            $('#encr-msg').append(data);
             $('#encr-msg').show();
+            $('.encr-result').show();
         }
     });
 }
@@ -114,8 +123,10 @@ function decrypt(){
                                                 .replace('{key}', $("#denc-key").val()),
         type: 'GET',
         success: function(data, status, xhr) {
+            $('#decr-msg').empty();
             $('#decr-msg').append(data);
             $('#decr-msg').show();
+            $('.decr-result').show();
         }
     });
 }

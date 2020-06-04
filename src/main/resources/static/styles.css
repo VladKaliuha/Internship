@@ -14,6 +14,23 @@ a {
   cursor: pointer;
 }
 
+#encr-msg:hover,
+#decr-msg:hover,
+#priv-key:hover{
+    overflow: visible;
+    white-space: normal;
+}
+
+#encr-msg,
+#decr-msg,
+#priv-key{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
 canvas {
   position: absolute;
   top: 0;
@@ -107,22 +124,22 @@ h3 {
 .menu option {
   width: 500px !important;
 }
-.menu form button, .menu form select {
+.menu button, .menu select {
   text-transform: none;
 }
-.menu form button, .menu form input, .menu form select, .menu form textarea, .menu form output {
+.menu button, .menu input, .menu select, .menu textarea, .menu output {
   color: #5A5A5A;
   font: inherit;
   margin: 0;
 }
-.menu form input, .menu form output {
+.menu input, .menu output {
   line-height: normal;
 }
-.menu form input[type=text]:focus, .menu form [type=email]:focus, .menu form textarea:focus, .menu form output {
+.menu input[type=text]:focus, .menu [type=email]:focus, .menu textarea:focus, .menu output {
   outline: none;
   padding: 0 0 5px 0;
 }
-.menu form input[type=text], .menu form [type=email], .menu form select, .menu form textarea, .menu form output {
+.menu input[type=text], .menu [type=email], .menu select, .menu textarea, .menu output {
   background: none;
   border: none;
   border-bottom: solid 2px #474544;
@@ -137,17 +154,17 @@ h3 {
   box-sizing: border-box;
   transition: all 0.3s;
 }
-.menu form select {
+.menu select {
   background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png") no-repeat right;
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-.menu form button, .menu form input, .menu form select, .menu form textarea, .menu form output {
+.menu button, .menu input, .menu select, .menu textarea, .menu output {
   color: #5A5A5A;
   font: inherit;
 }
-.menu form .form-button {
+.menu .form-button {
   background: none;
   border: solid 2px #474544;
   color: #474544;
@@ -160,7 +177,7 @@ h3 {
   text-transform: uppercase;
   transition: all 0.3s;
 }
-.menu form .form-button:hover {
+.menu .form-button:hover {
   background: #474544;
   color: #F2F3EB;
 }

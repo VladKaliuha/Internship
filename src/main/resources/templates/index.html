@@ -6,8 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
 </head>
 <body>
 
@@ -35,8 +33,8 @@
     <input type="text" placeholder="Message" name="message" id="message" required>
     <input  type="text" placeholder="Encryption key" name="enc-key" id="enc-key" >
         <input type="submit" value="ENCRYPT" class="form-button" onclick="encrypt()" />
-    <div id="encr-msg" style="display: none"></div>
-    <div id="priv-key" style="display: none"></div>
+    <div class="encr-result">Encrypted message: </div><div id="encr-msg" style="display: none"></div>
+    <div class="encr-result">Private key: </div> <div id="priv-key" style="display: none"></div>
 </div>
 
 <div id="decrypt" class="menu">
@@ -54,7 +52,7 @@
     <input type="text" placeholder="Encryption key" name="denc-key" id="denc-key" required>
     <input type="submit" value="DECRYPT" class="form-button"  onclick="decrypt()" />
 
-    <div id="decr-msg" style="display: none"></div>
+    <div class="decr-result">Decrypted message: </div><div id="decr-msg" style="display: none"></div>
 </div>
 <canvas width="1920" height="942"></canvas>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
