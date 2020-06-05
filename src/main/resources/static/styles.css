@@ -127,19 +127,19 @@ h3 {
 .menu button, .menu select {
   text-transform: none;
 }
-.menu button, .menu input, .menu select, .menu textarea, .menu output {
+.menu button, .menu input, .menu select, .menu textarea, .menu .output {
   color: #5A5A5A;
   font: inherit;
   margin: 0;
 }
-.menu input, .menu output {
+.menu input, .menu .output {
   line-height: normal;
 }
-.menu input[type=text]:focus, .menu [type=email]:focus, .menu textarea:focus, .menu output {
+.menu input[type=text]:focus, .menu [type=email]:focus, .menu textarea:focus, .menu .output {
   outline: none;
   padding: 0 0 5px 0;
 }
-.menu input[type=text], .menu [type=email], .menu select, .menu textarea, .menu output {
+.menu input[type=text], .menu [type=email], .menu select, .menu textarea, .menu .output {
   background: none;
   border: none;
   border-bottom: solid 2px #474544;
@@ -160,7 +160,7 @@ h3 {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-.menu button, .menu input, .menu select, .menu textarea, .menu output {
+.menu button, .menu input, .menu select, .menu textarea, .menu .output {
   color: #5A5A5A;
   font: inherit;
 }
@@ -182,6 +182,11 @@ h3 {
   color: #F2F3EB;
 }
 
+.output {
+  margin-top: 40px !important;
+  text-align: left;
+}
+
 @media (max-width: 500px) {
   .menu {
     width: 300px;
@@ -194,11 +199,6 @@ h3 {
 }
 #enc-key {
   display: none;
-}
-
-.menu form output {
-  display: none;
-  margin-top: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */

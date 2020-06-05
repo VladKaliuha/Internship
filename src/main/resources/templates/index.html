@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>IOT cipher</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="../styles.css" rel="stylesheet" >
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
@@ -21,7 +21,7 @@
     </h2>
 </div>
 <div id="encrypt" class="menu">
-    <img alt="" class="cross-button" src="./img/close.svg" onclick="mainMenu()">
+    <img alt="" class="cross-button" src="/img/close.svg" onclick="mainMenu()">
     <h3>Encrypt</h3>
     <div class="underline"></div>
     <select placeholder="Subject line" name="enc-method" id="enc-method" required>
@@ -33,12 +33,13 @@
     <input type="text" placeholder="Message" name="message" id="message" required>
     <input  type="text" placeholder="Encryption key" name="enc-key" id="enc-key" >
         <input type="submit" value="ENCRYPT" class="form-button" onclick="encrypt()" />
-    <div class="encr-result">Encrypted message: </div><div id="encr-msg" style="display: none"></div>
-    <div class="encr-result">Private key: </div> <div id="priv-key" style="display: none"></div>
+    <div class="output" id="encr-msg" style="display: none" title="Encrypted message"></div>
+    <div class="output" id="priv-key" style="display: none" title="Private key"></div>
+    <div class="output" id="encr-error" style="display: none">Something went wrong!</div>
 </div>
 
 <div id="decrypt" class="menu">
-    <img alt="" class="cross-button" src="./img/close.svg" onclick="mainMenu()">
+    <img alt="" class="cross-button" src="/img/close.svg" onclick="mainMenu()">
     <h3>Decrypt</h3>
     <div class="underline"></div>
     <select placeholder="Subject line" name="denc-method" id="denc-method" required>
@@ -52,12 +53,13 @@
     <input type="text" placeholder="Encryption key" name="denc-key" id="denc-key" required>
     <input type="submit" value="DECRYPT" class="form-button"  onclick="decrypt()" />
 
-    <div class="decr-result">Decrypted message: </div><div id="decr-msg" style="display: none"></div>
+    <div class="output" id="decr-msg" style="display: none"></div>
+    <div class="output" id="decr-error" style="display: none">Something went wrong!</div>
 </div>
 <canvas width="1920" height="942"></canvas>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="../script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

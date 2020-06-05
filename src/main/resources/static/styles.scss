@@ -99,21 +99,21 @@ h3 {
       text-transform: none;
     }
 
-    button, input, select, textarea, output {
+    button, input, select, textarea, .output {
       color: #5A5A5A;
       font: inherit;
       margin: 0;
     }
 
-    input,output {
+    input, .output {
       line-height: normal;
     }
-    input[type='text']:focus, [type='email']:focus, textarea:focus ,output{
+    input[type='text']:focus, [type='email']:focus, textarea:focus , .output{
       outline: none;
       padding: 0 0 5px 0;
     }
 
-    input[type='text'], [type='email'], select, textarea ,output{
+    input[type='text'], [type='email'], select, textarea , .output{
       background: none;
       border: none;
       border-bottom: solid 2px #474544;
@@ -135,7 +135,7 @@ h3 {
       -webkit-appearance: none;
     }
 
-    button, input, select, textarea,output {
+    button, input, select, textarea, .output {
       color: #5A5A5A;
       font: inherit;
     }
@@ -158,9 +158,12 @@ h3 {
       color: #F2F3EB;
     }
 
-  }
-}
 
+}
+.output{
+  margin-top: 40px !important;
+  text-align: left;
+}
 @media (max-width: $formWidth) {
   .menu{
     width: $formWidthMobile;
@@ -173,9 +176,4 @@ h3 {
 }
 #enc-key{
   display:none;
-}
-.menu form output{
-  display: none;
-  margin-top: 40px;
-
 }
